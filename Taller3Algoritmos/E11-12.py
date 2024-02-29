@@ -9,10 +9,22 @@ edadTotalProgramacion = 0
 totalPersonasMtto = 0
 totalMenoresMtto = 0
 totalMujerDiseño = 0
+edadTotalMujeres = 0
+totalPersonas = 0
+totalMujeres = 0
+totalHombres = 0
+edadTotalHombres = 0
+totalSoltero = 0
+totalPersonaCasada = 0
+totalViudos = 0
+totalUnionLibre = 0
 nombreMujerSistemas = []
 edadMujeresSistemas = []
 nombreHombreSistemas = []
 edadHombreSistemas = []
+nombreCasadoJoven = []
+edadCasadoJoven = []
+nombreUnionLibre = []
 
 while i == True:
 
@@ -22,6 +34,8 @@ while i == True:
     estadoCivil = int(input("Ingresa =>\n1--Soltero\n2--Casado\n3--Union Libre\n4--Viudo\nPara conocer Estado Civil: "))
     carrera = int(input("Ingresa =>\n1--Sistemas\n2--Programacion\n3--Mantenimiento\n4--Diseño\nPara conocer Carrera: "))
     salida = int(input("Ingresa =>\n1--Para Continuar Ingresando Datos\n2--Para Salir Programa\n=> "))
+
+    totalPersonas = totalPersonas + 1
 
     if salida == 2:
 
@@ -84,6 +98,48 @@ while i == True:
 
                 totalMujerDiseño = totalMujerDiseño + 1
 
+    if sexo == 2:
+
+        totalMujeres = totalMujeres + 1
+
+        edadTotalMujeres = edadTotalMujeres + edad
+
+    if sexo == 1:
+
+        totalHombres = totalHombres + 1
+
+        edadTotalHombres = edadTotalHombres + edad
+    
+    if estadoCivil == 1:
+
+        totalSoltero = totalSoltero + 1
+
+    if estadoCivil == 2:
+
+        totalPersonaCasada = totalPersonaCasada + 1
+
+        nombreCasadoJoven.append(nombre)
+
+        edadCasadoJoven.append(edad)
+
+        edadMenorCasado = min(edadCasadoJoven)
+
+        posicionEdadMenorCasado = edadCasadoJoven.index(edadMenorCasado)
+
+    if estadoCivil == 4:
+
+        totalViudos = totalViudos + 1
+
+    if estadoCivil == 3:
+
+        if edad > 80:
+
+            totalUnionLibre = totalUnionLibre + 1
+
+            nombreUnionLibre.append(nombre)
+
+
+
 
 if cantidadMujeresSistemas != 0:
 
@@ -104,3 +160,27 @@ if totalPersonasMtto != 0:
 if totalMujerDiseño != 0:
 
     print("La cantidad de Mujeres de Diseño Mayores de edad son: ", totalMujerDiseño)
+
+if totalMujeres != 0:
+
+    print("El promedio de edad de Mujeres es: ", edadTotalMujeres/totalMujeres)
+
+if totalHombres != 0:
+
+    print("El promedio de edad de Hombres es: ", edadTotalHombres/totalHombres)
+
+if totalSoltero != 0:
+
+    print("La cantidad de Personas Solteras son: ", totalSoltero)
+
+if totalPersonaCasada != 0:
+
+    print("El nombre de la Persona Casada mas Joven es: ", nombreCasadoJoven[posicionEdadMenorCasado])
+
+if  totalViudos != 0:
+
+    print("El porcentaje de Viudos es: ", (totalViudos/totalPersonas) * 100)
+
+if totalUnionLibre != 0:
+
+    print("Las personas mayores de 80 años y tienen Union libre son: ", nombreUnionLibre[:])
