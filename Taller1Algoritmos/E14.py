@@ -1,4 +1,4 @@
-"""def numeroRomano(numero):
+def numeroRomano(numero):
 
     numeros = {
 
@@ -28,15 +28,4 @@ if romano != 1:
     print(f"El numero romano de {x} es: {romano}")
 
 else:
-    print("Recuerda que es un numero entre 1 a 10 :)")"""
-
-
-x = int(input("Ingresa un numero entre 1 y 10 para conocer su equivalente en numero Romano: "))
-
-if x == 1:
-
-    print("El equivalente Romano es l")
-
-elif x == 2:
-
-    print("El equivalente Romano es ll")
+    print("Recuerda que es un numero entre 1 a 10 :)")

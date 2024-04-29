@@ -9,27 +9,27 @@ tercerNumero = int(input("Ingresa tercer numero: "))
 
 if primerNumero > segundoNumero and primerNumero > tercerNumero and segundoNumero > tercerNumero:
 
-    print("Primer numero Mayor, Segundo numero Medio, Tercer numero Menor")
+    print(f"{primerNumero} {segundoNumero} {tercerNumero}")
 
 if primerNumero > segundoNumero and primerNumero > tercerNumero and tercerNumero > segundoNumero:
 
-    print("Primer numero Mayor, Tercer numero Medio, Segundo numero Menor")
+    print(f"{primerNumero} {tercerNumero} {segundoNumero}")
 
 if segundoNumero > primerNumero and segundoNumero > tercerNumero and primerNumero > tercerNumero:
 
-    print("Segundo numero Mayor, Primer numero Medio, Tercer numero Menor")
+    print(f"{segundoNumero} {primerNumero} {tercerNumero}")
 
 if segundoNumero > primerNumero and segundoNumero > tercerNumero and tercerNumero > primerNumero:
 
-    print("Segundo numero Mayor, Tercer numero Medio, Primer numero Menor")
+    print(f"{segundoNumero} {tercerNumero} {primerNumero}")
 
 if tercerNumero > primerNumero and tercerNumero > segundoNumero and segundoNumero > primerNumero:
 
-    print("Tercer numero Mayor, Segundo numero Medio, Primer numero Menor")
+    print(f"{tercerNumero} {segundoNumero} {primerNumero}")
 
 if tercerNumero > primerNumero and tercerNumero > segundoNumero and primerNumero > segundoNumero:
 
-    print("Tercer numero Mayor, Primer numero Medio, Segundo numero Menor")
+    print(f"{tercerNumero} {primerNumero} {segundoNumero}")
 
 if primerNumero == segundoNumero and primerNumero == tercerNumero: 
 

@@ -11,7 +11,11 @@ tiempo = 30
 
 distancia = velocidad * tiempo
 
-print("La distancia es: ",distancia)"""
+print("La distancia es: ",distancia)
+
+D = V * T
+
+"""
 
 
 distancia = 3000
