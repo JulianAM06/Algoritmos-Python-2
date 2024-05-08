@@ -7,17 +7,14 @@ PJU = int(input("Ingresar produccion del Jueves: "))
 PVI = int(input("Ingresar produccion del Viernes: "))
 PSA = int(input("Ingresar produccion del Sabado: "))
 
-#Producccion Total
+
 PT = PLU + PMA + PMI + PJU + PVI + PSA
 
-#Promedio Produccion
 PROM = PT / 6
 
-#condicion si
 if PROM >= 100:
     print("El empleado recibira la bonificacion")
 
-#condicion sino    
 else:
     print("El empleado no recibira la bonificacion")
 
